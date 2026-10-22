@@ -1,0 +1,33 @@
+name: Import DroidPHP source
+on:
+  push:
+    paths:
+      - '.github/workflows/import-droidphp.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Import pinned original source
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output /tmp/droidphp.zip 'https://github.com/DroidPHP/DroidPHP/archive/db1865926a93d20ceb2ccc1dc4d279f282debcb6.zip'
+          mkdir -p /tmp/droidphp
+          unzip -q /tmp/droidphp.zip -d /tmp/droidphp
+          source_dir="$(find /tmp/droidphp -mindepth 1 -maxdepth 1 -type d | head -n 1)"
+          cp -a "$source_dir"/. .
+          mv README.md UPSTREAM_README.md
+          mv LICENSE LICENSE.original
+          git show HEAD:README.md > README.md
+          git show HEAD:LICENSE.DroidPHP > LICENSE.DroidPHP
+          git add -A
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'chore: import original DroidPHP source (2015)'
+            git push
+          fi
