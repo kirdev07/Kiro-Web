@@ -1,0 +1,139 @@
+
+* 1.9.0 (2014-12-17)
+  * added following PHP extension:
+       * GD Library
+       * Wddx
+       * XDebug
+       * gmp
+       * Phar
+  * Optimized php-cgi size
+
+* 1.8.1 (2014-11-14)
+  * fixed crash on enabling server #49
+
+* 1.8.0 (2014-11-13)
+  * Refactored and improved coding standard
+  * Improved UI
+  * Added Uninstall option
+  * Added config file manager
+  * Fixed and Improved Package manager
+  * Added config viewer/editor
+  * Added config parser
+
+* 1.7.0 (2014-8-15)
+  * updated from activity to fragment
+  * Added Drawer
+  * Improved UI
+  * AboutDialogFragment is Deprecated
+  * Fixed app from being crash when user clicks on extension
+  * fixed some major bug
+  * improved coding standard
+
+* 1.6.0 (2014-7-30)
+  * added extension manager
+  * fixed bug on changing server port
+  * done some major changes
+
+* 1.5.0 (2014-7-7)
+  * added DroidPHP Web UI
+
+* 1.4.0 (2014-7-3)
+   * added nginx
+   * added documents and cross compiling info
+   * fixed binaries startup failure
+   * recompiled binaries
+   * added following PHP extension:
+     * filter
+     * calander
+     * ctype
+     * DOM
+     * exif
+     * fileinfo
+     * ftp
+     * POSIX related function
+     * mhash
+     * shmop
+     * SimpleXML
+     * sysvmsg
+     * sysvsem
+     * Tokenizer
+     * XmlReader
+     * XmlWriter
+     * pcntl
+   * fixed several bug
+
+* 1.3.0 (2014-6-9)
+  * added following PHP extension
+     * mcrypt
+
+* 1.2.0 (2014-5-21)
+  * ability to run server as root
+  * ability to keep device stay on
+  * ability to execute SQL command
+  * ability to run server on boot
+  * ability to run server on app startup
+  * ability to change default server port
+  * ability to change default mysql login
+  * done some major optimization
+  * added -SIGTERM option to killall command to terminal the process
+  * done changes to lighttpd.conf to make it work with root
+  * fixed several bug
+  
+* 1.1.1 (2014-3-30)
+  * fix proguard bug causing start-up crash
+* 1.1.0 (2014-3-28)
+  * fixed several bug
+  * added several mods to server (the whole list of server mods is here):
+     * mod_rewrite
+     * mod_redirect
+     * mod_alias
+     * mod_extforward
+     * mod_access
+     * mod_setenv
+     * mod_flv_streaming
+     * mod_indexfile
+     * mod_userdir
+     * mod_dirlisting
+     * mod_status
+     * mod_simple_vhost
+     * mod_evhost
+     * mod_secdownload
+     * mod_cgi
+     * mod_fastcgi
+     * mod_scgi
+     * mod_proxy
+     * mod_staticfile
+     * mod_evasive
+     * mod_compress
+     * mod_compress
+     * mod_usertrack
+     * mod_expire
+     * mod_accesslog
+
+  * improved stability of the server
+  * UI interface changed
+  * fixed DNS problems. All functions related with gethostbyname(), getaddrinfo() and etc. are working correct now
+  * new version of lighttpd server (1.4.34)
+  * new version of php (5.5.9)
+  * added sendmail support based on msmtp
+  * new code base
+  * package rename to `org.opendroidphp.app`
+
+* 1.0.3 (2014-3-14)
+  * Refactored classnames
+  * Migrated project to Gradle
+
+* 1.0.2 (2013-6-26)
+  * stable version
+  * renamed from AMPDroid to DroidPHP
+  * several bug fixed
+  * added killall to kill process by name
+  * added Settings to change default server conf
+  * added on application mysql shell
+  * package rename from com.github.punkboy.ampdroid to com.github.DroidPHP
+  * made small speed optimizations
+  * made minor tweaks to allow better extensibility and flexibility
+  
+* 1.0.0 (2013-5-11)
+
+ * Initial release
